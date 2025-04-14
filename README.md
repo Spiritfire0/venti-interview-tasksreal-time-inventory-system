@@ -47,4 +47,18 @@ This setup enables:
 - Optional sharing with the original repository owner (manual process)
 - Getting feedback and assistance when needed
 
+## Submission Instructions
+
+For all tasks, please follow these submission instructions:
+
+1. Use this repo as a template
+2. Invite samuelkr as collaborator
+3. Complete source code for your solution
+4. Include a README file that contains:
+   - Setup instructions for running your solution locally
+   - Overview of your approach and architecture
+   - Any assumptions or limitations of your implementation
+   - Explanation of key design decisions
+   - What you would improve with more time
+
 For more information about this template setup, see the [TEMPLATE_SETUP.md](./TEMPLATE_SETUP.md) file. 

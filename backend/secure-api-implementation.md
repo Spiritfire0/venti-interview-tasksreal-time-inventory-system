@@ -57,11 +57,12 @@ Design and implement a secure API for a financial application that handles sensi
 
 ## Submission Guidelines
 
-1. Provide a GitHub repository with your solution
-2. Include a README with:
-   - Setup instructions
-   - Security measures implemented
-   - Explanation of architectural decisions
-   - Potential security improvements for a production environment
-3. Include appropriate tests, particularly security-focused ones
-4. Be prepared to discuss security trade-offs and decisions 
+1. Use this repo as a template
+2. Invite StAmirey as collaborator
+3. Complete source code for your solution
+4. A README file that includes:
+   - Setup instructions for running your solution locally
+   - Overview of your approach and architecture
+   - Any assumptions or limitations of your implementation
+   - Explanation of key design decisions
+   - What you would improve with more time 

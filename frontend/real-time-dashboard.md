@@ -53,10 +53,12 @@ For this task, you can:
 
 ## Submission Guidelines
 
-1. Provide a GitHub repository with your solution
-2. Include a README with:
-   - Setup instructions
-   - Explanation of your approach to reactivity and performance optimization
-   - Any architectural decisions you made
-   - Screenshots or a demo link
-3. Ensure the project can be run locally with simple commands 
+1. Use this repo as a template
+2. Invite StAmirey as collaborator
+3. Complete source code for your solution
+4. A README file that includes:
+   - Setup instructions for running your solution locally
+   - Overview of your approach and architecture
+   - Any assumptions or limitations of your implementation
+   - Explanation of key design decisions
+   - What you would improve with more time 

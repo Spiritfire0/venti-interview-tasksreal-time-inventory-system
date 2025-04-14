@@ -51,9 +51,10 @@ Regardless of which task you choose, we value:
 
 Please submit your solution as a GitHub repository with:
 
-1. Fork this repo
-2. Complete source code for your solution
-3. A README file that includes:
+1. Use this repo as a template
+2. Invite StAmirey as collaborator
+3. Complete source code for your solution
+4. A README file that includes:
    - Setup instructions for running your solution locally
    - Overview of your approach and architecture
    - Any assumptions or limitations of your implementation

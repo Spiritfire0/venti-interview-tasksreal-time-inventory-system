@@ -68,11 +68,12 @@ You can choose any programming language and technologies you prefer. Some option
 
 ## Submission Guidelines
 
-1. Provide a GitHub repository with your solution
-2. Include a README with:
-   - Overview of your chosen approach
-   - Architecture diagram if appropriate
-   - Explanation of trade-offs considered
-   - Setup and testing instructions
-3. Include tests that demonstrate distributed behavior (can be simulated)
-4. Be prepared to discuss how your solution would scale further 
+1. Use this repo as a template
+2. Invite StAmirey as collaborator
+3. Complete source code for your solution
+4. A README file that includes:
+   - Setup instructions for running your solution locally
+   - Overview of your approach and architecture
+   - Any assumptions or limitations of your implementation
+   - Explanation of key design decisions
+   - What you would improve with more time 

@@ -70,11 +70,12 @@ You may choose any technologies you're comfortable with, but your solution shoul
 
 ## Submission Guidelines
 
-1. Provide a GitHub repository with your solution
-2. Include a README with:
-   - Architecture diagram and explanation
-   - Technology choices and rationale
-   - Setup and demonstration instructions
-   - Discussion of trade-offs and future improvements
-3. The solution should be runnable locally with minimal setup
-4. Include any scripts or tools that demonstrate the system's behavior 
+1. Use this repo as a template
+2. Invite StAmirey as collaborator
+3. Complete source code for your solution
+4. A README file that includes:
+   - Setup instructions for running your solution locally
+   - Overview of your approach and architecture
+   - Any assumptions or limitations of your implementation
+   - Explanation of key design decisions
+   - What you would improve with more time 

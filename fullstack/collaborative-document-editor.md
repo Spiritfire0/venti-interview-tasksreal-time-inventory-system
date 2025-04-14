@@ -56,10 +56,12 @@ Build a real-time collaborative document editor that allows multiple users to ed
 
 ## Submission Guidelines
 
-1. Provide a GitHub repository with your solution
-2. Include a README with:
-   - Setup instructions for both backend and frontend
-   - Architecture overview
-   - Explanation of your approach to conflict resolution
-   - Any assumptions or design decisions you made
-3. Include a demo video or deployment link if possible 
+1. Use this repo as a template
+2. Invite StAmirey as collaborator
+3. Complete source code for your solution
+4. A README file that includes:
+   - Setup instructions for running your solution locally
+   - Overview of your approach and architecture
+   - Any assumptions or limitations of your implementation
+   - Explanation of key design decisions
+   - What you would improve with more time 
