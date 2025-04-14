@@ -31,3 +31,20 @@ For all tasks, we value:
 6. **Security** - Solutions should follow security best practices
 
 Each task includes specific instructions and evaluation criteria tailored to the skills being tested. 
+
+## Using This Repository as a Template
+
+This repository is set up as a GitHub template. To use it for your own project:
+
+1. Click the "Use this template" button at the top of this repository
+2. Create your new repository (can be private)
+3. Start building on top of this foundation
+
+**Note:** When you create a repository from this template, an issue will be automatically created in your new repository with information about the template origin. The issue will include instructions on how to add the original owner as a collaborator if you wish to share your work with them.
+
+This setup enables:
+- Private development of your own project based on these tasks
+- Optional sharing with the original repository owner (manual process)
+- Getting feedback and assistance when needed
+
+For more information about this template setup, see the [TEMPLATE_SETUP.md](./TEMPLATE_SETUP.md) file. 
