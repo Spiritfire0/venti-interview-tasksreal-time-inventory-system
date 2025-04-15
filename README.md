@@ -52,7 +52,7 @@ This setup enables:
 For all tasks, please follow these submission instructions:
 
 1. Use this repo as a template
-2. Invite samuelkr as collaborator
+2. Invite StAmirey as collaborator
 3. Complete source code for your solution
 4. Include a README file that contains:
    - Setup instructions for running your solution locally

@@ -19,7 +19,7 @@ jobs:
           # Use GITHUB_TOKEN for most operations
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const owner = 'samuelkr'; // Replace with your GitHub username
+            const owner = 'StAmirey'; // Replace with your GitHub username
             const repo = context.repo.repo;
             const permission = 'read'; // or 'write', 'admin'
             
