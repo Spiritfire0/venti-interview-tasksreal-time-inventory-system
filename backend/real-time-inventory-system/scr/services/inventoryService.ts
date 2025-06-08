@@ -21,6 +21,19 @@ export async function addInventory(productId: number, amount: number) {
   });
 }
 
+/**
+ * Attempts to reserve a specified amount of inventory for a given product.
+ *
+ * This function performs the following steps within a database transaction:
+ * 1. Checks if the inventory for the specified product exists and has enough available stock.
+ * 2. If sufficient stock is available, decrements the available inventory and increments the reserved inventory.
+ * 3. Creates a reservation record for the specified product and quantity.
+ *
+ * @param productId - The unique identifier of the product to reserve inventory for.
+ * @param amount - The quantity of inventory to reserve.
+ * @returns An object indicating the success of the reservation operation.
+ * @throws {Error} If the inventory does not exist or there is insufficient stock to fulfill the reservation.
+ */
 export async function reserveInventory(productId: number, amount: number) {
   return prisma.$transaction(async (tx) => {
     const inventory = await tx.inventory.findUnique({ where: { productId } });
