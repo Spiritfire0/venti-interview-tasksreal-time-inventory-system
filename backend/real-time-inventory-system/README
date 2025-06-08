@@ -1,4 +1,33 @@
+
+## General information
 For this task I will be using prisma as a databse. In order to get it started you need to download prisma here https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases/install-prisma-client-typescript-postgresql . Afterwards you will have to do cd /../Prisma and then run npx prisma generate in command prompt.
 
 I also opted to use jest in order to create tests for this task so you'll need to download that as well cd /../backend/real-time-inventory-system then npm install --save-dev jest ts-jest @types/jest then npx ts-jest config:init. You should then be able to run npx jest to preform the tests
 
+## Project File Structure
+
+```
+real-time-inventory-system/
+├── backend/
+│   └── real-time-inventory-system/
+│       ├── node_modules/
+│       ├── src/
+│       ├── tests/
+│       ├── package.json
+│       ├── tsconfig.json
+│       ├── jest.config.js
+│       └── README
+├── Prisma/
+│   ├── schema.prisma
+│   └── ...
+└── ...
+```
+
+- `Prisma/`: Contains Prisma schema and related files.
+- `backend/real-time-inventory-system/`: Main backend project directory.
+    - `src/`: Source code for the backend.
+    - `tests/`: Test files for the project.
+    - `package.json`: Project dependencies and scripts.
+    - `tsconfig.json`: TypeScript configuration.
+    - `jest.config.js`: Jest configuration.
+    - `README`: Project documentation.
