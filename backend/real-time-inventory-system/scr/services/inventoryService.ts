@@ -2,6 +2,12 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
+/**
+ * Creates a new product with the specified name and initializes its inventory.
+ *
+ * @param name - The name of the product to create.
+ * @returns A promise that resolves to the created product, including its associated inventory.
+ */
 export async function createProduct(name: string) {
   return prisma.product.create({
     data: {
