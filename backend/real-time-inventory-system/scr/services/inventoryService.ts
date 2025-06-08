@@ -64,26 +64,45 @@ export async function reserveInventory(productId: number, amount: number) {
   });
 }
 
+/**
+ * Releases a specified amount of reserved inventory for a given product,
+ * moving it back to available inventory.
+ *
+ * This function performs the following steps within a database transaction:
+ * 1. Checks if the inventory for the specified product exists and has enough reserved stock.
+ * 2. If sufficient reserved stock is available, decrements the reserved inventory and increments the available inventory.
+ *
+ * @param productId - The unique identifier of the product to release reservation for.
+ * @param amount - The quantity of reserved inventory to release.
+ * @returns An object indicating the success of the release operation.
+ * @throws {Error} If the inventory does not exist or there is not enough reserved stock.
+ */
 export async function releaseReservation(productId: number, amount: number) {
-  return prisma.$transaction(async (tx) => {
-    const inventory = await tx.inventory.findUnique({ where: { productId } });
+    return prisma.$transaction(async (tx) => {
+        const inventory = await tx.inventory.findUnique({ where: { productId } });
 
-    if (!inventory || inventory.reserved < amount) {
-      throw new Error("Not enough reserved stock");
-    }
+        if (!inventory || inventory.reserved < amount) {
+            throw new Error("Not enough reserved stock");
+        }
 
-    await tx.inventory.update({
-      where: { productId },
-      data: {
-        reserved: { decrement: amount },
-        available: { increment: amount },
-      },
+        await tx.inventory.update({
+            where: { productId },
+            data: {
+                reserved: { decrement: amount },
+                available: { increment: amount },
+            },
+        });
+
+        return { success: true };
     });
-
-    return { success: true };
-  });
 }
 
+/**
+ * Retrieves the inventory record for a given product.
+ *
+ * @param productId - The unique identifier of the product.
+ * @returns The inventory record for the specified product, or null if not found.
+ */
 export async function getInventory(productId: number) {
-  return prisma.inventory.findUnique({ where: { productId } });
+    return prisma.inventory.findUnique({ where: { productId } });
 }
