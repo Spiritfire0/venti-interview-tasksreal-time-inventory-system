@@ -1,0 +1,1 @@
+For this task I will be using prisma as a databse. In order to get it started you need to download prisma here https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases/install-prisma-client-typescript-postgresql . Afterwards you will have to do cd /../Prisma and then run npx prisma generate in command prompt.
