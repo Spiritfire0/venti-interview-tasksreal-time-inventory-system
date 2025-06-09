@@ -14,8 +14,9 @@ router.post("/products", async (req, res) => {
     });
     res.json(product);
   } catch (e) {
-    res.status(400).json({ error: e.message });
-  }
+  const message = e instanceof Error ? e.message : String(e);
+  res.status(400).json({ error: message });
+}
 });
 
 // Add stock
@@ -28,8 +29,9 @@ router.post("/inventory/add", async (req, res) => {
     });
     res.json({ success: true });
   } catch (e) {
-    res.status(400).json({ error: e.message });
-  }
+  const message = e instanceof Error ? e.message : String(e);
+  res.status(400).json({ error: message });
+}
 });
 
 // Reserve stock
@@ -49,8 +51,9 @@ router.post("/inventory/reserve", async (req, res) => {
     });
     res.json({ success: true });
   } catch (e) {
-    res.status(400).json({ error: e.message });
-  }
+  const message = e instanceof Error ? e.message : String(e);
+  res.status(400).json({ error: message });
+}
 });
 
 // Release reserved stock
@@ -66,8 +69,9 @@ router.post("/inventory/release", async (req, res) => {
     });
     res.json({ success: true });
   } catch (e) {
-    res.status(400).json({ error: e.message });
-  }
+  const message = e instanceof Error ? e.message : String(e);
+  res.status(400).json({ error: message });
+}
 });
 
 // Get inventory status
@@ -81,8 +85,9 @@ router.get("/inventory/:productId", async (req, res) => {
       total: (inv?.available || 0) + (inv?.reserved || 0)
     });
   } catch (e) {
-    res.status(400).json({ error: e.message });
-  }
+  const message = e instanceof Error ? e.message : String(e);
+  res.status(400).json({ error: message });
+}
 });
 
 export default router;

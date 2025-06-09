@@ -1,9 +1,8 @@
 {
   "name": "inventory-system",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "dev": "ts-node-dev src/index.ts",
+    "dev": "ts-node-dev Product-services/src/index.ts",
     "prisma": "prisma"
   },
   "dependencies": {

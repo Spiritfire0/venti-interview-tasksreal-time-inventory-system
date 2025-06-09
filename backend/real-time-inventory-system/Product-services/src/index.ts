@@ -1,7 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
-import inventoryRoutes from "../Inventory-Service/inventory";
-import { startGrpcServer } from "./inventoryService"; // Export a startGrpcServer() from inventoryService.ts
+import inventoryRoutes from "../../Inventory-Service/inventory";
+import startGrpcServer  from "./inventoryService"; // Export a startGrpcServer() from inventoryService.ts
 
 const app = express();
 app.use(bodyParser.json());
