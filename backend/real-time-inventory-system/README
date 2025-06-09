@@ -55,6 +55,16 @@ Get inventory status:
 curl http://localhost:3000/api/inventory/1
 
 
+
+8. Test the gRPC API
+Install grpcurl and run:
+
+Reserve stock via gRPC:
+grpcurl -plaintext -d '{"productId":1,"quantity":5}' localhost:50051 inventory.InventoryService/ReserveStock
+Add stock via gRPC:
+grpcurl -plaintext -d '{"productId":1,"quantity":10}' localhost:50051 inventory.InventoryService/AddStock
+Get inventory via gRPC:
+grpcurl -plaintext -d '{"productId":1}' localhost:50051 inventory.InventoryService/GetInventory
 ## Project File Structure
 
 real-time-inventory-system/
