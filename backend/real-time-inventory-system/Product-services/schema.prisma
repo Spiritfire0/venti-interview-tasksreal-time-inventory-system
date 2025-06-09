@@ -8,10 +8,11 @@ generator client {
 }
 
 model Product {
-  id          Int       @id @default(autoincrement())
-  name        String
-  inventory   Inventory?
-  createdAt   DateTime  @default(now())
+  id           Int           @id @default(autoincrement())
+  name         String
+  inventory    Inventory?
+  createdAt    DateTime      @default(now())
+  reservations Reservation[] // <-- Add this line
 }
 
 model Inventory {

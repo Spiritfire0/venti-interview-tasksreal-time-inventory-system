@@ -1,15 +1,62 @@
 
 ## General information
 
-# Prisma
-For this task I will be using prisma as a databse. In order to get it started you need to download prisma here https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases/install-prisma-client-typescript-postgresql . Afterwards you will have to do cd /../Prisma and then run npx prisma generate in command prompt.
 
-# Jest
-I also opted to use jest in order to create tests for this task so you'll need to download that as well cd /../backend/real-time-inventory-system then npm install --save-dev jest ts-jest @types/jest then npx ts-jest config:init. You should then be able to run npx jest to preform the tests
+## Here is the information on how to get it running on your computer. If you encounter any problems send me a dm on discord and I will do my best to solve it!
+1. Install PostgreSQL (if not already installed)
+Download from postgresql.org.
+During installation, set a password for the postgres user.
+After install, open pgAdmin or use the command line to create a database named yourdbname:
+
+
+psql -U postgres
+CREATE DATABASE yourdbname;
+
+
+2. Set Up Environment Variables
+Fill in the text in the .env file that is already set up as:
+.env
+
+3. Install Node.js Dependencies
+Open a terminal in real-time-inventory-system and run:
+
+npm install
+
+4. Run Prisma Migrations
+This will create the tables in your database.
+
+For the Inventory Service:
+
+npx prisma migrate dev --schema=Inventory-Service/schema.prisma
+
+
+5. Start the Server
+From real-time-inventory-system, run:
+
+npm run dev
+
+
+6. Open a New Terminal for Testing
+Open a new Command Prompt or PowerShell window and navigate to where you have the real-time-inventory-system folder.
+
+
+
+
+7. Test the REST API
+Create a product:
+curl -X POST http://localhost:3000/api/products -H "Content-Type: application/json" -d "{\"name\":\"Widget\"}"
+Add stock:
+curl -X POST http://localhost:3000/api/inventory/add -H "Content-Type: application/json" -d "{\"productId\":1,\"quantity\":10}"
+Reserve stock:
+curl -X POST http://localhost:3000/api/inventory/reserve -H "Content-Type: application/json" -d "{\"productId\":1,\"quantity\":5}"
+Release reserved stock:
+curl -X POST http://localhost:3000/api/inventory/release -H "Content-Type: application/json" -d "{\"productId\":1,\"quantity\":2}"
+Get inventory status:
+curl http://localhost:3000/api/inventory/1
+
 
 ## Project File Structure
 
-```
 real-time-inventory-system/
 ├── backend/
 │   └── real-time-inventory-system/
@@ -24,13 +71,5 @@ real-time-inventory-system/
 │   ├── schema.prisma
 │   └── ...
 └── ...
-```
 
-- `Prisma/`: Contains Prisma schema and related files.
-- `backend/real-time-inventory-system/`: Main backend project directory.
-    - `src/`: Source code for the backend.
-    - `tests/`: Test files for the project.
-    - `package.json`: Project dependencies and scripts.
-    - `tsconfig.json`: TypeScript configuration.
-    - `jest.config.js`: Jest configuration.
-    - `README`: Project documentation.
+
