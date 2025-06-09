@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package inventory;
+
+service InventoryService {
+  rpc AddStock (StockRequest) returns (StockResponse);
+  rpc ReserveStock (StockRequest) returns (StockResponse);
+  rpc ReleaseStock (StockRequest) returns (StockResponse);
+  rpc GetInventory (InventoryQuery) returns (InventoryStatus);
+}
+
+message StockRequest {
+  int32 productId = 1;
+  int32 quantity = 2;
+}
+
+message StockResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+message InventoryQuery {
+  int32 productId = 1;
+}
+
+message InventoryStatus {
+  int32 available = 1;
+  int32 reserved = 2;
+  int32 total = 3;
+}
