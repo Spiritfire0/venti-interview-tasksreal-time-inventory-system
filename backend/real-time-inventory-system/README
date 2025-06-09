@@ -83,3 +83,24 @@ real-time-inventory-system/
 └── ...
 
 
+Overview of your approach and architecture
+My approach on this was a bit chaotic since I have never workt with any of this stuff before.
+I started by doing a lot of reading on how everything worked and then I started to play around with the code.
+I used a combination of copilot, chatgpt and google to figure out how to do things. This made the coding very smooth since I could spend most of my time understanding how it worked and how to improve it.
+The architecture currently uses michroservices as you can se in the file structure. However it did not start this way and I changed it mid development since it would be a better fit for what was needed.
+a michroservice architecture allows for better scalability and maintainability, especially for a real-time inventory system where different components can evolve independently (thanks both chatgtp and copilot for helping me understand this).
+
+
+
+Any assumptions or limitations of your implementation
+
+One huge improvement that I would have like to make is to implement more test and look over the archetecture and documentation a lot more.
+Since it was a bit chaotic I did not have time to do this and I would have liked to spend more time on the documentation and the tests. Something my dad says a lot is that code is written onece and read nine hundread times.
+This is something I would have liked to improve on since the code is not very readable and the documentation is not very good as far as I am consered currently. Normaly I tend to work a lot slower and consistant but I did kinda stress on this project due to my lack of experience and time.
+
+
+What you would improve with more time¨
+
+This was something I found super intresting to work with. I choose this particullat question since I had basically no experience with this before and I wanted to learn something new.
+However I would probably prefer more frontend work since I have a bit more experience with it and am more comfotarable with it.
+I will probably continue to play around with backend stuff however, and eventually I will be comfotrable with it!
