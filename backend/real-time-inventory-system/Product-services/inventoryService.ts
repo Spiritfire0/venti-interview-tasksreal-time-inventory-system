@@ -3,7 +3,7 @@ import protoLoader from '@grpc/proto-loader';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
-const packageDef = protoLoader.loadSync('../protos/inventory.proto');
+const packageDef = protoLoader.loadSync('../Proto/inventory.proto');
 const proto = grpc.loadPackageDefinition(packageDef) as any;
 
 const server = new grpc.Server();
