@@ -67,3 +67,10 @@ server.bindAsync("0.0.0.0:50051", grpc.ServerCredentials.createInsecure(), () =>
   console.log("Inventory gRPC server running on port 50051");
   server.start();
 });
+
+export default function startGrpcServer() {
+  server.bindAsync("0.0.0.0:50051", grpc.ServerCredentials.createInsecure(), () => {
+    console.log("Inventory gRPC server running on port 50051");
+    server.start();
+  });
+}
