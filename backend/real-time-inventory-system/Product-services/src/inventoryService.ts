@@ -1,9 +1,11 @@
-import grpc from '@grpc/grpc-js';
-import protoLoader from '@grpc/proto-loader';
+import * as grpc from '@grpc/grpc-js';
+import * as protoLoader from '@grpc/proto-loader';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
-const packageDef = protoLoader.loadSync('../Proto/inventory.proto');
+const packageDef = protoLoader.loadSync(
+  __dirname + '/../../Proto/inventory.proto'
+);
 const proto = grpc.loadPackageDefinition(packageDef) as any;
 
 const server = new grpc.Server();
@@ -36,8 +38,9 @@ server.addService(proto.inventory.InventoryService.service, {
       });
       callback(null, { success: true, message: "Reserved" });
     } catch (e) {
-      callback(null, { success: false, message: e.message });
-    }
+  const message = e instanceof Error ? e.message : String(e);
+  callback(null, { success: false, message });
+}
   },
 
   ReleaseStock: async (call: any, callback: any) => {
@@ -63,10 +66,7 @@ server.addService(proto.inventory.InventoryService.service, {
   }
 });
 
-server.bindAsync("0.0.0.0:50051", grpc.ServerCredentials.createInsecure(), () => {
-  console.log("Inventory gRPC server running on port 50051");
-  server.start();
-});
+
 
 export default function startGrpcServer() {
   server.bindAsync("0.0.0.0:50051", grpc.ServerCredentials.createInsecure(), () => {
